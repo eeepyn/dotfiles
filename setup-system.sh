@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -e  #Instructs a shell to exit if a command fails
 exec 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
 
 script_name="$(basename "$0")"
